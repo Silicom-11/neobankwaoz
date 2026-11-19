@@ -1,18 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-
-  "//": "CI=false porque react-scripts trata los avisos de ESLint como errores cuando CI esta activa, y Vercel la activa por omision. Los avisos son de dependencias de useEffect e imports sin usar: no rompen la aplicacion.",
   "buildCommand": "CI=false react-scripts build",
   "outputDirectory": "build",
-
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://neobank-backend.onrender.com/api/:path*"
+      "destination": "https://neobankwaoz.onrender.com/api/:path*"
     },
     {
       "source": "/actuator/:path*",
-      "destination": "https://neobank-backend.onrender.com/actuator/:path*"
+      "destination": "https://neobankwaoz.onrender.com/actuator/:path*"
     },
     {
       "source": "/(.*)",
